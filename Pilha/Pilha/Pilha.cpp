@@ -87,13 +87,44 @@ void push()
 	cin >> novo->valor;
 	novo->prox = NULL;
 
+	if (topo == NULL) {
 
-}
+		topo=novo;
+	}
+
+	else {
+		novo->prox = topo;
+		topo = novo;
+
+
+	}
+
+
+
+
+
+	}
+
+
+
 
 void pop()
 {
+	if (topo == NULL) {
 
-	
+		cout << "Lista Vazia ";
+	}
+
+	else {
+		cout << "Topo da lista   " << topo->valor << endl;
+		NO* aux = topo;
+		topo=topo->prox;
+		free(aux);
+
+
+
+	}
+
 
 }
 
